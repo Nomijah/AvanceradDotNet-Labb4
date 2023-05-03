@@ -61,6 +61,21 @@ namespace AvanceradDotNet_Labb4.Controllers
             return NotFound($"Person with Id {id} not found.");
         }
 
+        [HttpPut("{id:int}/{name}/{phone}")]
+        public IActionResult UpdateNameAndPhone(int id, string name, string phone)
+        {
+            var result = _personRepo.GetById(id);
+            if ( result != null)
+            {
+                Person updatedPerson = new Person { PersonId = id, Name = name, Phone = phone };
+                _personRepo.Update(updatedPerson);
+                return Ok(updatedPerson);
+            }
+            return NotFound($"Person with Id {id} not found.");
+
+        }
+
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
