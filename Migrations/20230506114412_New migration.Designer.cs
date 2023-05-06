@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AvanceradDotNet_Labb4.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230503105754_init create")]
-    partial class initcreate
+    [Migration("20230506114412_New migration")]
+    partial class Newmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,25 +48,25 @@ namespace AvanceradDotNet_Labb4.Migrations
                     b.HasData(
                         new
                         {
-                            InterestId = -4,
+                            InterestId = 1,
                             Description = "Att åka på vågor med en bräda.",
                             Title = "Surf"
                         },
                         new
                         {
-                            InterestId = -3,
+                            InterestId = 2,
                             Description = "Springer runt med en kamera runt halsen.",
                             Title = "Fotografering"
                         },
                         new
                         {
-                            InterestId = -2,
+                            InterestId = 3,
                             Description = "Plinka på ett piano eller en gitarr typ.",
                             Title = "Musik"
                         },
                         new
                         {
-                            InterestId = -1,
+                            InterestId = 4,
                             Description = "Programmering i Unity.",
                             Title = "Spelutveckling"
                         });
@@ -105,37 +105,37 @@ namespace AvanceradDotNet_Labb4.Migrations
                     b.HasData(
                         new
                         {
-                            LinkId = -6,
+                            LinkId = 1,
                             LinkName = "Surf.se",
                             LinkUrl = "https://www.surf.se/"
                         },
                         new
                         {
-                            LinkId = -5,
+                            LinkId = 2,
                             LinkName = "Kamera & Bild",
                             LinkUrl = "https://www.kamerabild.se/fotoskolor/fotografering"
                         },
                         new
                         {
-                            LinkId = -4,
+                            LinkId = 3,
                             LinkName = "Musiksidan",
                             LinkUrl = "https://www.musiksidan.nu/"
                         },
                         new
                         {
-                            LinkId = -3,
+                            LinkId = 4,
                             LinkName = "Unity Homepage",
                             LinkUrl = "https://unity.com/"
                         },
                         new
                         {
-                            LinkId = -2,
+                            LinkId = 5,
                             LinkName = "Surfskolan",
                             LinkUrl = "https://surfskolan.se/"
                         },
                         new
                         {
-                            LinkId = -1,
+                            LinkId = 6,
                             LinkName = "Fotosidan",
                             LinkUrl = "https://www.fotosidan.se/"
                         });
@@ -164,19 +164,19 @@ namespace AvanceradDotNet_Labb4.Migrations
                     b.HasData(
                         new
                         {
-                            PersonId = -3,
+                            PersonId = 1,
                             Name = "Sven Svensson",
                             Phone = "0743524435"
                         },
                         new
                         {
-                            PersonId = -2,
+                            PersonId = 2,
                             Name = "Klara Larsson",
                             Phone = "0774563455"
                         },
                         new
                         {
-                            PersonId = -1,
+                            PersonId = 3,
                             Name = "Janne Josefsson",
                             Phone = "0797534262"
                         });

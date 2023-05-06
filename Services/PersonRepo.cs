@@ -1,5 +1,6 @@
 ﻿using AvanceradDotNet_Labb4.Data;
 using AvanceradDotNet_Labb4.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace AvanceradDotNet_Labb4.Services
@@ -29,7 +30,7 @@ namespace AvanceradDotNet_Labb4.Services
 
         public Person Delete(Person pToDelete)
         {
-            var result = GetSingle(pToDelete.PersonId);
+            var result = GetById(pToDelete.PersonId);
             if (result != null)
             {
                 _appDbContext.Persons.Remove(result);
@@ -42,11 +43,6 @@ namespace AvanceradDotNet_Labb4.Services
         public IEnumerable<Person> GetAll()
         {
             return _appDbContext.Persons;
-        }
-
-        public Person GetSingle(int id)
-        {
-            return _appDbContext.Persons.FirstOrDefault(p => p.PersonId == id);
         }
 
         public Person GetById(int id)

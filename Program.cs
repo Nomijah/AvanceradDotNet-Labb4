@@ -3,6 +3,7 @@ using AvanceradDotNet_Labb4.Models;
 using AvanceradDotNet_Labb4.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AvanceradDotNet_Labb4
 {
@@ -19,7 +20,9 @@ namespace AvanceradDotNet_Labb4
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<PersonRepo>();
+            builder.Services.AddScoped<ILabb4<Person>,PersonRepo>();
+            builder.Services.AddScoped<ILabb4<Interest>,InterestRepo>();
+            builder.Services.AddScoped<ILabb4<Link>,LinkRepo>();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));

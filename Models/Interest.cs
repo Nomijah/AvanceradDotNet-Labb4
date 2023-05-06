@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace AvanceradDotNet_Labb4.Models
 {
@@ -8,8 +9,10 @@ namespace AvanceradDotNet_Labb4.Models
         public int InterestId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public IEnumerable<Person> Persons { get; set; }
-        public IEnumerable<Link> Links { get; set; }
+        [JsonIgnore]
+        public ICollection<Person> Persons { get; set; }
+        [JsonIgnore]
+        public ICollection<Link> Links { get; set; }
 
         public Interest()
         {

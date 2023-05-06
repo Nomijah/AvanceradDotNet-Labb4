@@ -7,7 +7,7 @@
 namespace AvanceradDotNet_Labb4.Migrations
 {
     /// <inheritdoc />
-    public partial class initcreate : Migration
+    public partial class Newmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -95,10 +95,10 @@ namespace AvanceradDotNet_Labb4.Migrations
                 columns: new[] { "InterestId", "Description", "Title" },
                 values: new object[,]
                 {
-                    { -4, "Att åka på vågor med en bräda.", "Surf" },
-                    { -3, "Springer runt med en kamera runt halsen.", "Fotografering" },
-                    { -2, "Plinka på ett piano eller en gitarr typ.", "Musik" },
-                    { -1, "Programmering i Unity.", "Spelutveckling" }
+                    { 1, "Att åka på vågor med en bräda.", "Surf" },
+                    { 2, "Springer runt med en kamera runt halsen.", "Fotografering" },
+                    { 3, "Plinka på ett piano eller en gitarr typ.", "Musik" },
+                    { 4, "Programmering i Unity.", "Spelutveckling" }
                 });
 
             migrationBuilder.InsertData(
@@ -106,12 +106,12 @@ namespace AvanceradDotNet_Labb4.Migrations
                 columns: new[] { "LinkId", "InterestId", "LinkName", "LinkUrl", "PersonId" },
                 values: new object[,]
                 {
-                    { -6, null, "Surf.se", "https://www.surf.se/", null },
-                    { -5, null, "Kamera & Bild", "https://www.kamerabild.se/fotoskolor/fotografering", null },
-                    { -4, null, "Musiksidan", "https://www.musiksidan.nu/", null },
-                    { -3, null, "Unity Homepage", "https://unity.com/", null },
-                    { -2, null, "Surfskolan", "https://surfskolan.se/", null },
-                    { -1, null, "Fotosidan", "https://www.fotosidan.se/", null }
+                    { 1, null, "Surf.se", "https://www.surf.se/", null },
+                    { 2, null, "Kamera & Bild", "https://www.kamerabild.se/fotoskolor/fotografering", null },
+                    { 3, null, "Musiksidan", "https://www.musiksidan.nu/", null },
+                    { 4, null, "Unity Homepage", "https://unity.com/", null },
+                    { 5, null, "Surfskolan", "https://surfskolan.se/", null },
+                    { 6, null, "Fotosidan", "https://www.fotosidan.se/", null }
                 });
 
             migrationBuilder.InsertData(
@@ -119,9 +119,9 @@ namespace AvanceradDotNet_Labb4.Migrations
                 columns: new[] { "PersonId", "Name", "Phone" },
                 values: new object[,]
                 {
-                    { -3, "Sven Svensson", "0743524435" },
-                    { -2, "Klara Larsson", "0774563455" },
-                    { -1, "Janne Josefsson", "0797534262" }
+                    { 1, "Sven Svensson", "0743524435" },
+                    { 2, "Klara Larsson", "0774563455" },
+                    { 3, "Janne Josefsson", "0797534262" }
                 });
 
             migrationBuilder.CreateIndex(
